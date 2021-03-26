@@ -1,0 +1,152 @@
+.contactme-container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgb(17, 17, 17);
+  overflow-x: hidden;
+}
+
+.close {
+  right: 4%;
+  font-size: 5vh;
+  top: 4%;
+  position: fixed;
+  color: white;
+  background-color: rgb(17, 17, 17);
+  border: none;
+  cursor: pointer;
+}
+.contactme-pre-heading {
+  position: relative;
+  font-size: 2vh;
+  text-align: center;
+  font-family: "Poppins";
+  color: rgb(206, 206, 206);
+}
+
+.contactme-heading {
+  position: relative;
+  font-size: 5vh;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  margin-top: 5%;
+}
+
+.message-me {
+  font-size: 3vh;
+  font-family: "Poppins";
+  color: white;
+}
+.contactme-grid-wrapper {
+  margin: auto;
+  width: 90%;
+}
+.form {
+  width: 100%;
+  margin-left: 15%;
+  float: left;
+}
+
+input {
+  height: 3vh;
+  background-color: #161616;
+  border: none;
+  border-bottom: 1px solid #1d1d1d;
+  border-radius: 0;
+  font-size: 1.8vh;
+  padding: 9px 14px;
+  margin-right: 5%;
+  margin-top: 3%;
+  color: rgb(206, 206, 206);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+textarea {
+  width: 68%;
+  background-color: #161616;
+  color: rgb(206, 206, 206);
+  border: none;
+  border-bottom: 1px solid #1d1d1d;
+  border-radius: 0;
+  font-size: 1.8vh;
+  padding: 9px 14px;
+  margin-right: 5%;
+  margin-top: 3%;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-bottom: 1.5px solid rgb(57, 155, 107);
+}
+.textfield-name,
+.textfield-email {
+  width: 30%;
+}
+
+.textfield-subject {
+  width: 68%;
+}
+
+.textfield-send {
+  height: 15%;
+  width: 20%;
+  border-radius: 50px;
+  font-size: 1.6vw;
+  background-color: rgb(57, 155, 107);
+  color: white;
+  cursor: pointer;
+}
+
+.textfield-send:hover {
+  background-color: rgb(10, 194, 105);
+}
+
+.contactme-hr {
+  margin: 0 10px;
+}
+
+.list-class {
+  display: flex;
+}
+.contactme-detail {
+  display: flex;
+}
+
+.contactme-info-name {
+  margin: 0;
+  margin-bottom: 5%;
+  font-family: "Poppins";
+  font-size: 2vh;
+}
+
+.contactme-info-span {
+  font-family: "Poppins";
+  color: rgb(206, 206, 206);
+}
+
+@media screen and (max-width: 898px) {
+  .contactme-heading {
+    margin-top: 15%;
+  }
+  .textfield-name,
+  .textfield-email,
+  .textfield-subject,
+  textarea {
+    width: 90%;
+  }
+  .textfield-send {
+    height: 30%;
+    width: 45%;
+    font-size: large;
+    border-radius: 50px;
+    background-color: rgb(57, 155, 107);
+    color: white;
+    cursor: pointer;
+  }
+  .form {
+    margin-left: 0;
+  }
+}

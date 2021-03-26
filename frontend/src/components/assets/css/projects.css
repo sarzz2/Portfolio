@@ -1,0 +1,98 @@
+.project-container {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgb(17, 17, 17);
+    overflow-y: scroll;
+
+  }
+
+  .project-close {
+    right: 4%;
+    font-size: 5vh;
+    top: 4%;
+    position: fixed;
+    color: white;
+  }
+  .project-pre-heading{
+    position: relative;
+    font-size: 2vh;
+    text-align: center;
+    font-family: "Poppins";
+    color: rgb(206, 206, 206);
+  }
+  
+  .project-heading{
+    position: relative;
+    font-size: 5vh;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    margin-top: 5%;
+    color:white;
+  }
+
+  .project-card{
+      display: flex;
+      width: 60%;
+      margin: auto;
+      margin-top: 5%;
+      box-shadow: 0 8px 18px 0;
+      padding: 10px;
+      background-color: rgb(24, 24, 24);
+
+  }
+
+  .project-wrapper{
+      width: 100%;
+  }
+
+  .project-card-img{
+    max-width: 30%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .project-card-title{
+      color: white;
+      margin-top: 0;
+      margin-left: 3%;
+      margin-bottom: 0;
+      font-family: "Montserrat";
+  }
+
+  .project-card-content{
+      color: white;
+      margin: 1% 3%;
+      text-align: justify;
+      font-family: "Poppins";
+  }
+
+  .project-github{
+      position: relative;
+      float: right;
+      cursor: pointer;
+      background-color: rgb(57, 155, 107);
+      border: none;
+      line-height: 2em;
+      padding: 8px;
+      top: 75%;
+  }
+  .project-github i{
+       position: absolute;
+ }
+
+ .project-card:hover{
+  box-shadow: 0 10px 25px 0 rgb(9, 9, 9);
+  transition: .5s ease;
+ }
+
+
+ @media screen and (max-width: 1000px) {
+  .project-card{
+      display: flow-root;
+  }
+  .project-card-img{
+      max-width: 100%;
+  }
+  }

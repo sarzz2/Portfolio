@@ -1,0 +1,105 @@
+.blog-container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgb(17, 17, 17);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+.blog-pre-heading {
+  position: relative;
+  font-size: 1.5vh;
+  text-align: center;
+  font-family: "Poppins";
+  color: rgb(206, 206, 206);
+}
+
+.blog-heading {
+  position: relative;
+  font-size: 5vh;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+.blog-card {
+  width: 70%;
+  margin: auto;
+  margin-top: 8%;
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: auto auto auto;
+}
+
+.card {
+  font-size: 30px;
+  width: 70%;
+}
+
+@media screen and (max-width: 1500px) {
+  .blog-card {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    row-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: auto auto;
+    padding: 20px;
+  }
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+  float: left;
+}
+
+.card-title {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 10px 0px;
+}
+.card-text {
+  font-family: "Poppins";
+  margin: 0;
+  font-size: 1.4vh;
+  height: 6vh;
+  text-overflow: ellipsis;
+  text-align: justify;
+  overflow: hidden;
+}
+
+
+.card:hover{
+  transition:1s ease;
+  opacity: 0.3;
+}
+
+
+@media screen and (max-width: 985px) {
+  .blog-card {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    row-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: auto;
+    padding: 20px;
+  }
+  .card-text{
+    height: 7vh;
+  }
+
+  .blog-heading{
+    margin-top: 15%;
+    margin-bottom: 0;
+  }
+}
