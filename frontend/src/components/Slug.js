@@ -5,7 +5,9 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import Moment from "react-moment";
-import twitter from "./assets/twitter.png";
+import LazyLoad from "react-lazy-load";
+import commentBox from 'commentbox.io';
+import { slide as Menu } from 'react-burger-menu'
 
 const renderers = {
   code: ({ language, value }) => {
@@ -16,11 +18,17 @@ const renderers = {
 };
 export default class Slug extends Component {
   async componentDidMount() {
-    fetch("/api" + window.location.pathname)
+    await fetch("/api" + window.location.pathname)
       .then((response) => response.json())
       .then((data) => (console.log(data), this.setState({ items: data })));
+      this.removeCommentBox = commentBox('5768387913318400-proj',{
+        textColor: 'white'
+      });
   }
+  componentWillUnmount() {
 
+    this.removeCommentBox();
+}
   constructor(props) {
     super(props);
     this.state = {
@@ -31,38 +39,50 @@ export default class Slug extends Component {
   render() {
     return (
       <div class="slug-container">
-       <Link to="/"> <img src={twitter} class="logo"></img></Link>
-        <div class={"slug-topnav"}>
-          <Link to="/contactme">Contact</Link>
-          <Link to="/blogs">Blog</Link>
-          <Link to="/contact">Projects</Link>
-          <Link to="/about">About</Link>
-          {/* <a class="icon">
-          <i class="fa fa-bars"></i>
-        </a> */}
+        <Link to="/">
+          {" "}
+          <img src="/api/cdn/logo" class="logo"></img>
+        </Link>
+        <div class="slug-topnav">
+          <a href="/contactme" className="menu-item">Contact</a>
+          <a href="/blogs" className="menu-item">Blog</a>
+          <a href="/project" className="menu-item">Projects</a>
+          <a href="/about" className="menu-item">About</a>
+        </div>
+        <div class="responsive">
+        <Menu right disableAutoFocus> 
+          <a href="/contactme" className="menu-item">Contact</a>
+          <a href="/blogs" className="menu-item">Blog</a>
+          <a href="/project" className="menu-item">Projects</a>
+          <a href="/about" className="menu-item">About</a>
+          </Menu>
         </div>
         <div class="slug-post">
           {this.state.items.map((item) => (
             <div key={item.slug} className="slug-card">
               <a href={item.slug}></a>
+              <LazyLoad>
                 <div>
                   <img
                     src={"/api/cdn/" + item.img_link}
                     class="slug-image"
                   ></img>
                 </div>
+              </LazyLoad>
               <div class="slug-content">
                 <h4 class="slug-title">{item.title}</h4>
-                <p class="slug-author">sarzz | </p>
-                <p class="slug-">
-                  <Moment fromNow>{item.created_on}</Moment>
+                <p class="slug-author">
+                  sarzz | <Moment fromNow>{item.created_on}</Moment>
                 </p>
+                <p></p>
                 <ReactMarkdown className="slug-text" renderers={renderers}>
                   {item.content}
                 </ReactMarkdown>
               </div>
             </div>
           ))}
+            <div className="commentbox" style={{width:"80%", margin:"auto"}} />
+
         </div>
 
         {/* <div class="comment-container">

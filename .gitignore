@@ -3,8 +3,6 @@
 *.userosscache
 *.sln.docstates
 
-# User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
 
 # Build results
 [Dd]ebug/
@@ -81,23 +79,12 @@ $tf/
 # Guidance Automation Toolkit
 *.gpState
 
-# ReSharper is a .NET coding add-in
-_ReSharper*/
-*.[Rr]e[Ss]harper
-*.DotSettings.user
-
-# JustCode is a .NET coding addin-in
-.JustCode
 
 # TeamCity is a build add-in
 _TeamCity*
 
 # DotCover is a Code Coverage Tool
 *.dotCover
-
-# NCrunch
-_NCrunch_*
-.*crunch*.local.xml
 
 # MightyMoose
 *.mm.*
@@ -337,3 +324,5 @@ yarn-error.log*
 /.changelog
 .npm/
 yarn.lock
+
+push.sh

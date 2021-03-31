@@ -1,57 +1,60 @@
 import React, { Component } from "react";
 import "./assets/css/contactme.css";
-import axios from 'axios';
+import axios from "axios";
 
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
 axios.defaults.xsrfCookieName = "csrftoken";
 
 export default class ContactMe extends Component {
-
-
   constructor(props) {
     super(props);
     this.state = {
-      Name: '',
-      Email: '',
-      Subject: '',
-      Message: '',
+      Name: "",
+      Email: "",
+      Subject: "",
+      Message: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.goBack = this.goBack.bind(this);
-
   }
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value });
-
   }
 
-   handleSubmit(){
-     axios.post('/api/contact',{
+  async handleSubmit() {
+    try{
+     const resp = await axios.post("/api/contact", {
         name: this.state.Name,
         email: this.state.Email,
         subject: this.state.Subject,
-        message: this.state.Message
-    },)
-      .then((response) => {
-          alert("Message Sent"+response.data);
-          window.location="/contactme";
+        message: this.state.Message,
       });
-  }
+    }
+    catch(err)
+    {
+      console.error(err);
+      alert(err+"Failed Try Again!");
+    }
+    finally {
+      window.location = "/contactme";
 
+    }
+    
+  }
 
   goBack() {
     this.props.history.goBack();
-  } 
+  }
   render() {
     return (
       <div class="contactme-container">
         <div class="contactme-title">
           <button class="close" onClick={this.goBack}>
-            <i class="fa fa-close"></i>
+            <i class="fas fa-times"></i>
           </button>
           <h3 class="contactme-heading">
-            <p class="contactme-pre-heading">Get in touch with know me</p>
+            <p class="contactme-pre-heading">Get in touch with me</p>
             Contact Me
           </h3>
         </div>

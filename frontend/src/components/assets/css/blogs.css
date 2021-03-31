@@ -7,7 +7,6 @@
   overflow-x: hidden;
 }
 
-
 .blog-pre-heading {
   position: relative;
   font-size: 1.5vh;
@@ -39,6 +38,15 @@
   width: 70%;
 }
 
+.close {
+  right: 4%;
+  font-size: 5vh;
+  top: 4%;
+  position: fixed;
+  background-color: rgb(17, 17, 17);
+  color: white;
+  border: none;
+}
 @media screen and (max-width: 1500px) {
   .blog-card {
     margin-top: 10%;
@@ -75,12 +83,10 @@
   overflow: hidden;
 }
 
-
-.card:hover{
-  transition:1s ease;
+.card:hover {
+  transition: 1s ease;
   opacity: 0.3;
 }
-
 
 @media screen and (max-width: 985px) {
   .blog-card {
@@ -94,11 +100,11 @@
     grid-template-columns: auto;
     padding: 20px;
   }
-  .card-text{
+  .card-text {
     height: 7vh;
   }
 
-  .blog-heading{
+  .blog-heading {
     margin-top: 15%;
     margin-bottom: 0;
   }

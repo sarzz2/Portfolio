@@ -1,99 +1,100 @@
-.slug-container{
-    width: 100%;
-    height: 100%;
-    color: white;
-    margin: auto;
-    background-color: rgb(17, 17, 17);
-    overflow-y: scroll;
-    overflow-x: hidden;
-
+.slug-container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  margin: auto;
+  background-color: rgb(17, 17, 17);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.slug-image{
-    display: block;
+.slug-image {
+  display: block;
   width: 100%;
   height: 500px;
   object-fit: fill;
 }
 
-
-.slug-content{
-    width: 65%;
-margin: auto;
+.slug-content {
+  width: 65%;
+  margin: auto;
 }
-.slug-title{
-    font-size: 6vh;
-    margin-top: 5%;
-    margin-bottom: 0;
-    font-family: "Montserrat", sans-serif;
+.slug-title {
+  font-size: 6vh;
+  margin-top: 5%;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
-.slug-text{
-    font-family: "Poppins";
-    font-size: 2vh;
-    text-align: justify;
-
+.slug-text {
+  font-family: "Poppins";
+  font-size: 2vh;
+  text-align: justify;
 }
-.logo{
-    height:10%;
-    width: 10%;
-    padding: 30px;
-    margin-left: 20px;
-    position: absolute;
+.logo {
+  height: 10%;
+  width: 10%;
+  padding: 30px;
+  margin-left: 20px;
+  position: absolute;
+}
+
+.slug-topnav {
+  position: absolute;
+  top: 5px;
+  right: 16px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+.slug-topnav a {
+  display: block;
+  text-align: center;
+  padding: 30px 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Roboto";
+  color: #f2f2f2;
+  margin: 8px;
+  float: left;
+}
+
+.comment-container {
+  display: flex;
+  margin: 5% 10%;
+}
+
+.slug-comment-img {
+  max-width: 50px;
+}
+
+.footer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  background-color: black;
+}
+
+.footer a {
+  margin: 1% 1%;
+}
+
+.slug-author {
+  color: rgb(206, 206, 206);
+  font-family: "Poppins";
+  font-size: 1vh;
+}
+
+.slug-time {
+  color: rgb(206, 206, 206);
+  font-family: "Poppins";
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+
+  .slug-topnav{
+    display: none;
   }
-
-.slug-topnav{
-  
-    position: absolute;
-    top: 5px;
-    right: 16px;
-}
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-.slug-topnav a{
-    display: block;
-    text-align: center;
-    padding: 30px 20px;
-    margin-right: 10px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bolder;
-    font-family: "Roboto";
-    color: #f2f2f2;
-    margin: 8px;
-    float: left;
-}
-
-.comment-container{
-    display: flex;
-    margin: 5% 10%;
-}
-
-.slug-comment-img{
-    max-width: 50px;
-}
-
-
-.footer{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-    background-color: black;
-}
-
-.footer a{
-    margin: 1% 1%;
-}
-
-.slug-author{
-    float: left;
-    color: rgb(206, 206, 206);
-    font-family: "Poppins";
-    font-size: 1vw;
-}
-
-.slug-time{
-    color: rgb(206, 206, 206);
-    font-family: "Poppins";
-    font-size: 1vw;
 }

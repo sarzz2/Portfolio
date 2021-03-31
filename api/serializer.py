@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post, Contact, Media, Project, Comment
+from .models import Post, Contact, Media, Project
 from django.contrib.auth.models import User
 
 
@@ -44,12 +44,6 @@ class CDNSerializer(serializers.ModelSerializer):
     class Meta:
         model = Media
         fields = ['name', 'file', 'file_binary']
-
-
-class CommentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Comment
-        fields = ['post', 'author', 'text', 'created_date', 'approved_comment']
 
 
 class ProjectSerializer(serializers.ModelSerializer):

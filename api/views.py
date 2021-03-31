@@ -10,13 +10,13 @@ from base64 import b64decode
 from django.shortcuts import HttpResponse
 
 
-@api_view(['POST'])
-def PostBlog(request):
-    serializer = PostSerializer(data=request.data)
-    if serializer.is_valid():
-        serializer.create(request.data)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# @api_view(['POST'])
+# def PostBlog(request):
+#     serializer = PostSerializer(data=request.data)
+#     if serializer.is_valid():
+#         serializer.create(request.data)
+#         return Response(serializer.data, status=status.HTTP_201_CREATED)
+#     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET'])
@@ -31,11 +31,6 @@ def SlugBlog(request, slug):
     posts = Post.objects.filter(slug=slug)
     serializer = ViewSerializer(posts, many=True)
     return Response(serializer.data)
-
-
-# @api_view(['POST'])
-# def AddComment(request, pk):
-#     post = get_object_or_404(Post, pk=pk)
 
 
 @api_view(['POST'])
@@ -54,13 +49,13 @@ def ContactMe(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['POST'])
-def PostToCDN(request):
-    serializer = CDNSerializer(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# @api_view(['POST'])
+# def PostToCDN(request):
+#     serializer = CDNSerializer(data=request.data)
+#     if serializer.is_valid():
+#         serializer.save()
+#         return Response(serializer.data, status=status.HTTP_201_CREATED)
+#     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 def GetFromCDN(request, cdn):
@@ -114,13 +109,13 @@ def GetDataType(file):
         return "Not Found"
 
 
-@api_view(['POST'])
-def PostProject(request):
-    serializer = ProjectSerializer(data=request.data)
-    if serializer.is_valid():
-        serializer.create(request.data)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# @api_view(['POST'])
+# def PostProject(request):
+#     serializer = ProjectSerializer(data=request.data)
+#     if serializer.is_valid():
+#         serializer.create(request.data)
+#         return Response(serializer.data, status=status.HTTP_201_CREATED)
+#     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET'])
@@ -128,16 +123,3 @@ def ViewProject(request):
     project = Project.objects.all()
     serializer = ViewProjectSerializer(project, many=True)
     return Response(serializer.data)
-    # def add_comment_to_post(request, pk):
-#     post = get_object_or_404(Post, pk=pk)
-#     if request.method == "POST":
-#         form = CommentForm(request.POST)
-#         if form.is_valid():
-#             comment = form.save(commit=False)
-#             comment.post = post
-#             comment.save()
-#             return HttpResponseRedirect('/articles')
-#             # return redirect('<slug:pk>/', pk=post.pk)
-#     else:
-#         form = CommentForm()
-#     return render(request, 'sarzzsite/add_comment.html', {'form': form})
