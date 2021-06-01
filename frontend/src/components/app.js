@@ -17,7 +17,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
-const HomePage = lazy(() => import("./Homepage"));
+const HomePage = lazy(() => import("./HomePage"));
 const About = lazy(() => import("./About"));
 const Blogs = lazy(() => import("./Blogs"));
 const Slug = lazy(() => import("./Slug"));

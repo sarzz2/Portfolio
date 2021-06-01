@@ -125,3 +125,107 @@
     margin-right: auto;
   }
 }
+
+
+
+.skills{
+  width: 80%;
+  margin: 15% auto;
+  font-family: "Poppins";
+
+}
+@keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-webkit-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-moz-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-o-keyframes load{
+  from {
+    width: 0%
+  }
+}
+
+.bar{
+  background-color: white;
+  display: flex;
+  padding: 2px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.bar::before{
+  content:  attr(data-skill);
+  background-color: #f3b0ff;
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+  border-radius: inherit;
+  animation: load 2s 0s;
+  -webkit-animation: load 2s 0s;
+  -moz-animation: load 2s 0s;
+  -o-animation: load 2s 0s;
+}
+
+.bar.python::before{
+  width: calc(95% - 10px);
+  background-color: #4481f7;
+}
+.bar.css::before{
+  width: calc(90% - 10px);
+  background-color: #4481f7;
+}
+.bar.html::before{
+  width: calc(90% - 10px);
+  background-color: #4481f7;
+}
+.bar.js::before{
+  width: calc(60% - 10px);
+  background-color: #4481f7;
+}
+.bar.java::before{
+  width: calc(60% - 10px);
+    background-color: #4481f7;
+
+}
+.bar.cpp::before{
+  width: calc(40% - 10px);
+    background-color: #4481f7;
+
+}
+
+
+.lang{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 5%;
+}
+
+.list{
+  margin: 3% 5%;
+  font-family: "Poppins";
+  font-size: large;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.fadewhite{
+  border:solid #c7c7c7 ;
+}
+
+@media screen and (max-width: 898px) {
+  .lang{
+    display: block;
+  }
+}

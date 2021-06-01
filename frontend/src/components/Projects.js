@@ -52,7 +52,7 @@ export default class Projects extends Component {
                   style={{ color: "black", position: "absolute" }}
                 ></i>
                 <span style={{ marginLeft: "30px", fontSize: "20px" }}>
-                  {" "}
+                  {"   "}
                   Repository
                 </span>
               </button>

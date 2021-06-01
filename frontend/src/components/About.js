@@ -48,9 +48,40 @@ export default class About extends Component {
               <p class="about-title">From: </p>
               <p>India</p>
             </div>
+            <div class="skills">
+            <h1>Skill Set</h1>
+            <hr></hr>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+            <div class="lang">
+            <div class="list"><i class="fab fa-python"></i><span>  Python</span><br></br><hr class="fadewhite"></hr></div>
+            <div class="list"><i class="fab fa-js"></i><span>  JavaScript</span><br></br><hr class="fadewhite"></hr></div>
+            <div class="list"><i class="fas fa-bullhorn"></i><span>  TypeScript</span><br></br><hr class="fadewhite"></hr></div>
+            <div class="list"><i class="fab fa-react"></i><span>  React JS</span><br></br><hr class="fadewhite"></hr></div>
+            <div class="list"><i class="fas fa-bullhorn"></i><span>  Next JS</span><br></br><hr class="fadewhite"></hr></div>
+            <div class="list"><i class="fas fa-bullhorn"></i><span>  SQL<br></br><hr class="fadewhite"></hr></span></div>
+            <div class="list"><i class="fas fa-bullhorn"></i><span>  Flutter<br></br><hr class="fadewhite"></hr></span></div>
+            <div class="list"><i class="fas fa-bullhorn"></i><span>  Java<br></br><hr class="fadewhite"></hr></span></div>
+            <div class="list"><i class="fas fa-bullhorn"></i><span>  C#<br></br><hr class="fadewhite"></hr></span></div>
+            <div class="list"><i class="fas fa-bullhorn"></i><span>  C++<br></br><hr class="fadewhite"></hr></span></div>
+            <div class="list"><i class="fas fa-bullhorn"></i><span>  Golang<br></br><hr class="fadewhite"></hr></span></div>
+            <div class="list"><i class="fab fa-docker"></i><span>  Docker</span><br></br><hr class="fadewhite"></hr></div>
+            <div class="list"><i class="fas fa-bullhorn"></i><span>  Shell<br></br><hr class="fadewhite"></hr></span></div>
+
+      
+
+
+
+
+
+
+            </div>
+           
           </div>
+          </div>
+          
         </div>
-      </div>
+            </div>
     );
   }
 }
+
