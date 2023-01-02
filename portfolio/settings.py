@@ -9,7 +9,7 @@ load_dotenv()
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-ALLOWED_HOSTS = ['127.0.0.1', 'sarzz.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','http://3.6.39.26']
 
 
 DEBUG = True
@@ -41,7 +41,7 @@ MIDDLEWARE = [
 
 ]
 CSRF_COOKIE_NAME = "csrftoken"
-
+CSRF_TRUSTED_ORIGINS = ['http://3.6.39.26']
 
 ROOT_URLCONF = 'portfolio.urls'
 
