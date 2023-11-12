@@ -1,5 +1,5 @@
 # Preview
-https://sarzz.herokuapp.com
+https://sarzz.me
 
 
 # Description
